@@ -56,3 +56,7 @@ TBD: the use of a single Python environment instead of 3 different ones. I prefe
 
 This a personal project developed with the help of a friend.
 All the code in here can be referenced for other projects (we would love to hear for what you have used our code).
+
+## Requirements
+
+- Docker installed on your computer
