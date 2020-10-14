@@ -60,3 +60,6 @@ All the code in here can be referenced for other projects (we would love to hear
 ## Requirements
 
 - Docker installed on your computer
+
+To launch the app run from the root of the project the following command:
+> docker-compose up --force-recreate --build
