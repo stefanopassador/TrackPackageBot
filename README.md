@@ -1,5 +1,5 @@
 # TrackPackageBot
-Bot that let you track your packages 
+Bot that let you track your packages
 
 ## Idea
 
@@ -17,7 +17,7 @@ Our objective is to get around the use of different technologies like:
 
 The user will be able to input the tracking identifier in many ways:
 
-- By sending a message to a Telegram bot [link](https://www.hackster.io/Salmanfarisvp/telegram-bot-with-raspberry-pi-f373da)
+- By sending a message to a Telegram bot (tutorial [link](https://www.hackster.io/Salmanfarisvp/telegram-bot-with-raspberry-pi-f373da))
 
 At this point, the application will save the user_id and the tracking_id into a database.
 
@@ -27,7 +27,7 @@ Continuously, the steps that the bot will do are:
 
 - Get the job waiting to be processed (a queue has to be implemented)
 - Obtain all information about the tracking-identifier (tracking_id, tracking_website, ecc)
-- Lookup the status of the delivery 
+- Lookup the status of the delivery
 - If new changes have arrived then add a row to the db with the new status and the timestamp of the update
 
 The application will automatically create new jobs based on the last update time of tracking.
@@ -47,7 +47,7 @@ The project architecture can be structured as follows:
   - Python environment to execute the update scripts
   - Python environment to send the notifications to the user
   - SQL environment to store the data
-  
+
 The application should be run on a Raspberry PI (2 or higher), so the Docker images have to be ARM based.
 
 TBD: the use of a single Python environment instead of 3 different ones. I prefer the 3 different environment to better separate the components of the application.
