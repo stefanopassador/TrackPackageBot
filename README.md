@@ -17,7 +17,7 @@ Our objective is to get around the use of different technologies like:
 
 The user will be able to input the tracking identifier in many ways:
 
-- By sending a message to a Telegram bot
+- By sending a message to a Telegram bot [link](https://www.hackster.io/Salmanfarisvp/telegram-bot-with-raspberry-pi-f373da)
 
 At this point, the application will save the user_id and the tracking_id into a database.
 
