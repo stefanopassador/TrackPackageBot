@@ -2,17 +2,10 @@ version: "3.8"
 services:
   web:
     build: ./input/
-  mysql:
-    image: mysql
-    container_name: mysql
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "3306:3306"
+  db:
+    image: postgres
+    restart: always
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: secret
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: tracker_db
+      

@@ -60,16 +60,12 @@ All the code in here can be referenced for other projects (we would love to hear
 ## Requirements
 
 - Docker installed on your computer
+- Postgres installed on your computer (run this for mac: `brew install postgresql`)
 
 To launch the app run from the root of the project the following command:
 > docker-compose up --force-recreate --build
 
 To create the required table in the db run:
-> mysql -h 0.0.0.0 -P 3306 --protocol=tcp -u homestead -p
-> INSERT PASSWORD
-...
-> USE homestead;
-> CREATE TABLE counts ( counter INT DEFAULT 0);
-> INSERT INTO counts (counter) VALUES (0);
-
-Now you can open http://0.0.0.0:5000/ and try refreshing a few times.
+> docker ps
+> docker exec -it <postgres CONTAINER ID> bash
+> psql -h localhost -p 5432 -U tracker_db
