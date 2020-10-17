@@ -1,15 +1,10 @@
 import time
+import private_config as private_cnf
 
 from sqlalchemy import create_engine
-
-import private_config as private_cnf
 import telepot
-from bs4 import BeautifulSoup
-import requests
 
 bot = telepot.Bot(private_cnf.telegram_bot_token) 
-
-from sqlalchemy import create_engine
 
 db_string = "postgres://tracker_db:secret@db:5432/tracker_db"
 db = create_engine(db_string)
@@ -51,19 +46,13 @@ def handle(msg):
             str(msg['date']) + "," + \
             "'" + str(msg['text']) + "'" + ");")
 
-def scraping():
 
-    track_number = "1Z3746A36802537112%0D%0A"
-    url = "https://www.ups.com/track?loc=it_IT&tracknum= " + track_number + "&requester=WT/trackdetails"
-    req = requests.get(url)
-    soup = BeautifulSoup(req.content, 'html.parser')
-    print(soup.prettify())
+    
 
 if __name__ == '__main__':
 
     bot.message_loop(handle)
     print('I am listening...')
-    scraping()
     while True:
         time.sleep(3)
 

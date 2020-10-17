@@ -2,3 +2,5 @@
 input/.DS_Store
 input/private_config.py
 input/telegram_input_message_example.json
+
+process/venv/*
