@@ -59,7 +59,12 @@ All the code in here can be referenced for other projects (we would love to hear
 
 ## Requirements
 
+### General
+
 - Docker installed on your computer
+
+### Database
+
 - Postgres installed on your computer (run this for mac: `brew install postgresql`)
 
 To launch the app run from the root of the project the following command:
@@ -69,3 +74,7 @@ To create the required table in the db run:
 > docker ps
 > docker exec -it <postgres CONTAINER ID> bash
 > psql -h localhost -p 5432 -U tracker_db
+
+### Process
+
+You must have donwnloaded and located the chromedriver. If you have not already, download it from here: https://sites.google.com/a/chromium.org/chromedriver/downloads

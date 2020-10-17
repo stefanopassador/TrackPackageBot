@@ -4,3 +4,6 @@ input/private_config.py
 input/telegram_input_message_example.json
 
 process/venv/*
+.vscode/settings.json
+process/chromedriver.exe
+process/scraper/__pycache__/*
