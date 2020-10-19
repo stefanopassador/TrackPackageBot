@@ -14,3 +14,9 @@ CREATE TABLE IF NOT EXISTS telegram_message_received (
     date BIGINT,
     text TEXT
 );
+CREATE TABLE IF NOT EXISTS tracked_packages (
+    tracker_id TEXT PRIMARY KEY,
+    currier TEXT,
+    last_update TIMESTAMP,
+    last_location TEXT
+);

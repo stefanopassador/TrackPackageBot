@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 import private_config as private_cnf
 
 from sqlalchemy import create_engine
@@ -45,6 +46,16 @@ def handle(msg):
             "'" + str(msg['chat']['type']) + "'" + "," + \
             str(msg['date']) + "," + \
             "'" + str(msg['text']) + "'" + ");")
+
+    if 'ups|' in msg['text']:
+        carrier = msg['text'].split('|')[0]
+        tracker_id = msg['text'].split('|')[1]
+        db.execute("INSERT INTO tracked_packages(tracker_id, currier, last_update, last_location) VALUES ({}, {}, {}, {});".format(
+            tracker_id,
+            carrier,
+            'TIMESTAMP ' + datetime.datetime.now(),
+            '')
+        )
 
 
     
