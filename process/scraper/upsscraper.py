@@ -6,7 +6,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 class UPSScraper(Scraper):
     def scrape(self, track_number):
         driver = self.driver
-
+        
         url = "https://www.ups.com/track?loc=it_IT&tracknum=" + track_number + "&requester=WT/trackdetails"
         
         driver.get(url)
@@ -38,4 +38,8 @@ class UPSScraper(Scraper):
         driver.close()
 
         print('Last update on {}, the package was at {}'.format(last_update_date+' '+last_update_time, last_update_locality))
-        return last_update_date+' '+last_update_time, last_update_locality
+        
+        d = dict()
+        d['timestamp'] = last_update_date+' '+last_update_time
+        d['location'] = last_update_locality
+        return d

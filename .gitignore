@@ -7,3 +7,4 @@ process/venv/*
 .vscode/settings.json
 process/chromedriver.exe
 process/scraper/__pycache__/*
+process/debug.log
