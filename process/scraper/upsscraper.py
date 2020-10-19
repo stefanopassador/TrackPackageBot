@@ -1,9 +1,9 @@
-from scraper import scraper
+from scraper.scraper import Scraper
 
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-class UPSScraper(scraper.Scraper):
+class UPSScraper(Scraper):
     def scrape(self, track_number):
         driver = self.driver
 
