@@ -8,7 +8,7 @@ The idea of this project is to create a simple application that, starting from t
 Our objective is to get around the use of different technologies like:
 
 - Docker
-- CI/CD through GitLab Actions
+- CI/CD through GitHub Actions
 - Automate testing
 
 ## What the bot should do
